@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:18
+    container_name: better-auth-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: better_auth
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5436:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+      - ./docker/init:/docker-entrypoint-initdb.d:ro
+
+volumes:
+  postgres_data:
