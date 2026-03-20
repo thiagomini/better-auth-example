@@ -4,14 +4,18 @@
   "description": "example of better auth implementation using express and typescript",
   "type": "module",
   "scripts": {
-    "start": "node ./src/index.ts",
+    "start": "node --watch --env-file=./.env ./src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "imports": {
+    "#lib/*.ts": "./src/lib/*.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.30.3",
   "dependencies": {
+    "better-auth": "^1.5.5",
     "express": "^5.2.1"
   },
   "devDependencies": {
