@@ -1,9 +1,17 @@
+import cors from 'cors';
 import express from 'express';
 import { fromNodeHeaders, toNodeHandler } from 'better-auth/node';
 import { auth } from '#lib/auth.ts';
 
 const app = express();
 const port = 3000;
+
+app.use(
+  cors({
+    origin: 'http://localhost:3001',
+    credentials: true,
+  }),
+);
 
 app.get('/', (req, res) => {
   res.send('Hello World!');

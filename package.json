@@ -2,29 +2,16 @@
   "name": "better-auth-example",
   "version": "1.0.0",
   "description": "example of better auth implementation using express and typescript",
-  "type": "module",
+  "private": true,
   "scripts": {
-    "start": "node --watch --env-file=./.env ./src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "migrate": "pnpm dlx auth@latest migrate"
-  },
-  "imports": {
-    "#lib/*.ts": "./src/lib/*.ts"
+    "dev": "nx run-many -t dev start --projects=api,client"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.30.3",
-  "dependencies": {
-    "better-auth": "^1.5.5",
-    "express": "^5.2.1",
-    "pg": "^8.20.0"
-  },
   "devDependencies": {
     "@tsconfig/node-lts": "^24.0.0",
-    "@types/express": "^5.0.6",
-    "@types/node": "^25.5.0",
-    "@types/pg": "^8.18.0",
     "nx": "22.6.1"
   },
   "nx": {}

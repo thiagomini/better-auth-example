@@ -1,6 +1,18 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "targetDefaults": {
+    "build": {
+      "cache": true,
+      "dependsOn": ["^build"]
+    },
+    "dev": {
+      "cache": false,
+      "continuous": true
+    },
+    "start": {
+      "cache": false,
+      "continuous": true
+    },
     "test": {
       "cache": true
     },
@@ -8,5 +20,6 @@
       "cache": true
     }
   },
-  "defaultBase": "master"
+  "defaultBase": "master",
+  "analytics": false
 }

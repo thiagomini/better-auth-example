@@ -1,0 +1,25 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --watch --env-file=../../.env ./src/index.ts",
+    "migrate": "pnpm dlx auth@latest migrate"
+  },
+  "imports": {
+    "#lib/*.ts": "./src/lib/*.ts"
+  },
+  "dependencies": {
+    "better-auth": "^1.5.5",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "pg": "^8.20.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.5.0",
+    "@types/pg": "^8.18.0"
+  }
+}
