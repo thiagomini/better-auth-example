@@ -24,6 +24,8 @@
     "@tsconfig/node-lts": "^24.0.0",
     "@types/express": "^5.0.6",
     "@types/node": "^25.5.0",
-    "@types/pg": "^8.18.0"
-  }
+    "@types/pg": "^8.18.0",
+    "nx": "22.6.1"
+  },
+  "nx": {}
 }
