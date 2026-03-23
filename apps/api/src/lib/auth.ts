@@ -4,7 +4,12 @@ import { Pool } from 'pg';
 
 export const auth = betterAuth({
   trustedOrigins: ['http://localhost:3000', 'http://localhost:3001'],
-
+  rateLimit: {
+    window: 10, // 10 seconds
+    max: 2, // limit each IP to 5 requests per window
+    enabled: true,
+    storage: 'memory',
+  },
   emailAndPassword: {
     enabled: true,
   },
