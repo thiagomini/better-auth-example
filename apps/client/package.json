@@ -9,6 +9,7 @@
     "start": "next start -p 3001"
   },
   "dependencies": {
+    "@better-auth/infra": "^0.1.13",
     "better-auth": "^1.5.5",
     "next": "^15.3.0",
     "react": "^19.0.0",

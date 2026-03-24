@@ -11,6 +11,7 @@
     "#lib/*.ts": "./src/lib/*.ts"
   },
   "dependencies": {
+    "@better-auth/infra": "^0.1.13",
     "better-auth": "^1.5.5",
     "cors": "^2.8.5",
     "express": "^5.2.1",
