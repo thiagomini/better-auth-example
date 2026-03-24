@@ -1,2 +1,8 @@
 packages:
-  - 'apps/*'
+  - apps/*
+
+ignoredBuiltDependencies:
+  - '@nestjs/core'
+  - '@swc/core'
+  - nx
+  - sharp
