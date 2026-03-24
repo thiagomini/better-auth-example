@@ -1,5 +1,5 @@
 import { betterAuth } from 'better-auth';
-import { openAPI, twoFactor } from 'better-auth/plugins';
+import { bearer, openAPI, twoFactor } from 'better-auth/plugins';
 import { dash } from '@better-auth/infra';
 import { Pool } from 'pg';
 import { passwordHistory } from '#lib/plugins/password-history.ts';
@@ -21,6 +21,9 @@ export const auth = betterAuth({
     passwordHistory(),
     dash({
       apiKey: process.env.BETTER_AUTH_API_KEY as string,
+    }),
+    bearer({
+      requireSignature: true,
     }),
   ],
   database: new Pool({
