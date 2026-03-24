@@ -217,6 +217,7 @@ export default function Dashboard() {
       {error && <p style={{ color: 'red' }}>{error}</p>}
 
       <nav style={{ display: 'flex', gap: 16, marginTop: 24 }}>
+        <Link href="/dashboard/change-password">Change Password</Link>
         <Link href="/">Home</Link>
         <button onClick={handleSignOut}>Sign Out</button>
       </nav>
